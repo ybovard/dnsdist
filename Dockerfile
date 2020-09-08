@@ -13,4 +13,4 @@ RUN apt-key add /tmp/powerdns-pub.asc \
 
 USER 1000
 ENTRYPOINT [ "/usr/bin/dnsdist" ]
-CMD ["-c", "/etc/dnsdist/dnsdist.conf" ]
+CMD ["-C", "/etc/dnsdist/dnsdist.conf", "--local=0.0.0.0:5300" ]
